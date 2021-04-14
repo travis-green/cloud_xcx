@@ -1,0 +1,17 @@
+<view class="i-as-mask i-class-mask {{ visible ? 'i-as-mask-show' : '' }} ptp_exposure" bindtap="handleClickMask" catchtouchmove="preventTouchmove" data-ptpid="ace1-15dd-ae84-e120"></view>
+<view class="i-class i-as {{ visible ? 'i-as-show' : '' }}" catchtouchmove="preventTouchmove">
+  <view class="i-as-header i-class-header">
+    <slot name="header"></slot>
+  </view>
+  <view class="i-as-actions">
+    <view class="i-as-action-item" wx:for="{{actions}}" wx:key="name">
+      <button hover-class="none" bindtap="handleClickItem" data-index="{{index}}" open-type="{{item.openType}}" class="i-as-btn-qts" data-ptpid="703a-14b1-a87b-dc1d">
+          <image wx:if="{{item.icon}}" src="{{item.icon}}" class="i-btn-image" lazy-load />
+          <view class="i-as-btn-text">{{item.name}}</view>
+      </button>
+    </view>
+  </view>
+  <view class="i-as-cancel">
+    <button hover-class="none" class="i-as-cancel-btn" bindtap="handleClickCancel" data-ptpid="a523-14d5-8f96-4968">取消</button>
+  </view>
+</view>

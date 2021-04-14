@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/cameraContent/cameraContent",
+    "pages/previewHome/previewHome",
+    "pages/mapPage/mapPage",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room"
+  ],
+  "tabBar": {
+    "color": "#9595BD",
+    "selectedColor": "#111E38",
+    "backgroundColor": "#FFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "媒体",
+        "iconPath": "images/icon1.png",
+        "selectedIconPath": "images/icon1s.png"
+      },
+      {
+        "pagePath": "pages/userConsole/userConsole",
+        "text": "位置",
+        "iconPath": "images/icon2.png",
+        "selectedIconPath": "images/icon2s.png"
+      },
+      {
+        "pagePath": "pages/storageConsole/storageConsole",
+        "text": "画布",
+        "iconPath": "images/icon3.png",
+        "selectedIconPath": "images/icon3s.png"
+      },
+      {
+        "pagePath": "pages/databaseGuide/databaseGuide",
+        "text": "开放接口",
+        "iconPath": "images/icon4.png",
+        "selectedIconPath": "images/icon4s.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序将会获取您的位置信息用于岗位列表的展示"
+    }
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "小程序开放能力Demo",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

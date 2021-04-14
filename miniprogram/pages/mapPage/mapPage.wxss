@@ -1,0 +1,23 @@
+.cover-view {
+    position: absolute;
+    top: calc(50% - 150rpx);
+    left: calc(50% - 300rpx);
+    /* opacity: .7; */
+  }
+  
+  .flex-wrp{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-item{
+    width: 20rpx;111
+    height: 30rpx;
+    text-align: center;
+    line-height:30px;
+    background-size: 20rpx 30rpx;
+    background-image: url('https://qiniu-image.qtshe.com/activitySchool/awardsuccess.png');
+    background-repeat: no-repeat;
+  }
+  

@@ -1,0 +1,126 @@
+.i-as {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f7f7f7;
+    transform: translate3d(0, 100%, 0);
+    transform-origin: center;
+    transition: all .2s ease-in-out;
+    z-index: 9990;
+    visibility: hidden;
+  }
+  
+  .i-as-show {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  
+  .i-as-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 9900;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .i-as-mask-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .i-as-action-item {
+    position: relative;
+  }
+  
+  .i-as-action-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    transform: scale(.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 0 solid #e9eaec;
+    border-bottom-width: 1px;
+  }
+  
+  .i-as-header {
+    background: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 12px;
+    color: #80848f;
+  }
+  
+  .i-as-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    transform: scale(.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 0 solid #e9eaec;
+    border-bottom-width: 1px;
+  }
+  
+  .i-as-cancel {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .i-as-cancel button {
+    font-size: 32rpx;
+    color: #6c6c6c;
+    height: 130rpx;
+    line-height: 130rpx;
+    font-weight: bold;
+  }
+
+  
+  .i-as-btn-qts {
+    width: calc(100% - 112rpx);
+    margin-left: 56rpx;
+    height: 130rpx;
+    line-height: 130rpx;
+    font-size: 32rpx;
+    color: #6C6C6C;
+    border-bottom: 2rpx solid #EEE;
+  }
+  
+  .i-btn-image {
+    width: 52rpx;
+    height: 52rpx;
+    margin-right: 40rpx;
+    float: left;
+    margin-top: 34rpx;
+  }
+  
+  .i-as-btn-icon {
+    font-size: 14px !important;
+    margin-right: 4px;
+  }
+  
+  @keyframes btn-spin {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

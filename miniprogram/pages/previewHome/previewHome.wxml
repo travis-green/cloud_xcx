@@ -1,0 +1,17 @@
+<view class="body-content">
+  <button bindtap="send" class="mini-btn" size="mini">发表</button>
+  <textarea class="content-area" bindinput="contentInput" value="{{content}}" maxlength="200"
+    placeholder-class="content-area-ph" placeholder="善于分享" />
+  <view class="choose-img">
+    <view class="img-body inline_block" wx:key="{{index}}" wx:for="{{imgList}}">
+      <icon bindtap="delImg" data-idx="{{index}}" class="icon-box-img" type="clear" color="red" size="25"></icon>
+      <image bindtap="showDynamicImg" data-num="{{index}}"  mode="aspectFill" class="img-item"  src="{{item.type=='video'?item.poster:item.url}}">
+      </image>
+    </view>
+    <view class="inline_block">
+      <view class="add" bindtap="chooseImg">
+        <image src="/images/add.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

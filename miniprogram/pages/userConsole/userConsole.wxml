@@ -1,0 +1,15 @@
+<!-- pages/userConsole/userConsole.wxml -->
+<view class="container">
+  <!-- 媒体-地图 -->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="handleOpen">
+      <text>地图</text>
+    </view>
+  </view>
+  <!-- 媒体-地图 -->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="handleOpen">
+      <text>地图</text>
+    </view>
+  </view>
+</view>
