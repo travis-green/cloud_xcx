@@ -1,13 +1,14 @@
-<map id="myMap" style="width: 100%; height: 1200rpx;" show-location>
-    <cover-view class="cover-view">
-        <cover-view class="container">
-            <cover-view class="flex-wrp">
-                <cover-view class="flex-item"></cover-view>
-            </cover-view>
-        </cover-view>
-    </cover-view>
-</map>
-<!-- <button type="primary" bindtap="getCenterLocation">获取当前经纬度</button>
-<button type="primary" bindtap="moveToLocation">移动到目标位置</button>
+<map id="myMap" latitude="{{latitude}}" show-compass="true" enable-rotate="true" longitude="{{longitude}}" style="width: 100%; height: 100%; z-index: 800; position: fixed;" show-location></map>
+<cover-view class="cover-view" style="z-index:900;">
+    <cover-image class="coverImage" src="/images/icon2s.png" bindload="" binderror=""></cover-image>
+    
+</cover-view>
+<view class="markbtn" style="margin-top: 90rpx;" bindtap="addMarkers">添加mark</view>
+<view class="markbtn" style="margin-top: 30rpx;" bindtap="removeMarkers">移除mark</view>
+<view class="markbtn" style="margin-top: 30rpx;" bindtap="moveToLocation">返回到EFC</view>
+<view class="markbtn" style="margin-top: 30rpx;" bindtap="fromCenterLocation">获取屏幕中心坐标</view>
+<view class="markbtn" style="margin-top: 30rpx;" bindtap="mapGetRotate">获取地图旋转角</view>
+<view class="markbtn" style="margin-top: 30rpx;" bindtap="openMapAppAPI">打开地图APP->目的地</view>
+<!-- <button type="primary" bindtap="moveToLocation">移动到目标位置</button>
 <button type="primary" bindtap="translateMarker">移动标注</button>
 <button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button> -->

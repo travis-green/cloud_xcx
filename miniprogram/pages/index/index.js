@@ -5,7 +5,7 @@ import util from '../../utils/util'
 
 Page({
   data: {
-    btntype: 1, //按钮类型,修改此类型 查看不同的button 类型1 获取openid-云函数， 2获取用户信息-旧， 3获取用户信息新， 4授权手机号
+    btntype: 2, //按钮类型,修改此类型 查看不同的button 类型1 获取openid-云函数， 2获取用户信息-旧， 3获取用户信息新， 4授权手机号
     visible: false, //actionsheet
     avatarUrl: './user-unlogin.png',
     userInfo: {},
