@@ -5,6 +5,7 @@
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
     "pages/cameraContent/cameraContent",
+    "pages/viedeoPage/viedeoPage",
     "pages/previewHome/previewHome",
     "pages/mapPage/mapPage",
     "pages/addFunction/addFunction",

@@ -5,7 +5,7 @@ import util from '../../utils/util'
 
 Page({
   data: {
-    btntype: 2, //按钮类型,修改此类型 查看不同的button 类型1 获取openid-云函数， 2获取用户信息-旧， 3获取用户信息新， 4授权手机号
+    btntype: 4, //按钮类型,修改此类型 查看不同的button 类型1 获取openid-云函数， 2获取用户信息-旧， 3获取用户信息新， 4授权手机号
     visible: false, //actionsheet
     avatarUrl: './user-unlogin.png',
     userInfo: {},
@@ -126,7 +126,29 @@ Page({
   },
   getPhoneNumber(e) {
     if (e.detail.errMsg === 'getPhoneNumber:ok') {
+      console.log(e)
+      let { cloudID, encryptedData, iv } = e.detail
+      wx.cloud.callFunction({
+        name: 'getPhoneNumber',
+        data: {
+          cloudID,
+          encryptedData,
+          iv
+        },
+        success: res => {
+          // getPhoneNumber
+          console.log(typeof (res.result.userInfo.openId))
+          util.toast(`${res.result.userInfo.openId}`)
+          //业务处理
+          app.globalData.openid = res.result.userInfo.openId
+        },
+        fail: err => {
+          console.error('[云函数] [login] 调用失败', err)
+          // 失败业务处理
+        }
+      })
       //授权了手机号
+      // iv endat 给后端解密 返回手机号
     } else {
       //取消了授权
     }
