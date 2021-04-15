@@ -131,16 +131,14 @@ Page({
       wx.cloud.callFunction({
         name: 'getPhoneNumber',
         data: {
-          cloudID,
-          encryptedData,
-          iv
+          phoneNumber: wx.cloud.CloudID(e.detail.cloudID)
         },
         success: res => {
           // getPhoneNumber
-          console.log(typeof (res.result.userInfo.openId))
-          util.toast(`${res.result.userInfo.openId}`)
+          console.log(res)
+          // util.toast(`${res.result.userInfo.openId}`)
           //业务处理
-          app.globalData.openid = res.result.userInfo.openId
+          // app.globalData.openid = res.result.userInfo.openId
         },
         fail: err => {
           console.error('[云函数] [login] 调用失败', err)
@@ -273,6 +271,9 @@ Page({
       sourceType: ['album', 'camera'], //选择图片的来源
       success: res => {
         console.log(res)
+      },
+      fail: () => {
+        console.log('取消上传')
       }
     })
   },
