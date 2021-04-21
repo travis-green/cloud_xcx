@@ -1,0 +1,2 @@
+开发者后台先关联公众号
+<official-account bindload="oaloadfun" binderror="oaerrorfun"></official-account>

@@ -13,7 +13,15 @@ App({
         traceUser: true,
       })
     }
-
+    const performance = wx.getPerformance()
+    const observer = performance.createObserver((entryList) => {
+      //返回的是list
+      console.log('性能\n', entryList.getEntries())
+      // console.log('route: 路由性能；appLaunch: 小程序启动耗时\n', entryList.getEntriesByName("appLaunch", "navigation")[0])
+      // console.log('firstRender: 页面首次渲染耗时\n', entryList.getEntriesByName("firstRender", "render")[0])
+      // console.log('evaluateScript: 注入脚本耗时\n', entryList.getEntriesByName("evaluateScript", "script")[0])
+    })
+    observer.observe({ entryTypes: ['render', 'script', 'navigation'] })
     // this.globalData = {}
   },
   globalData: {

@@ -19,7 +19,51 @@ Page({
       })
     }
   },
-
+  handleOpen(e) {
+    // console.log(e.target.dataset.clicknum)
+    switch (Number(e.currentTarget.dataset.clicknum)) {
+      case 1:
+        this.handleOpenopenDataPage()
+        break;
+      case 2:
+        this.handleOpenadPage()
+        break;
+      case 3:
+        this.handleOpencuspage()
+        break;
+      case 4:
+        this.handleOpenofficeaccount()
+        break;
+      case 5:
+        this.handleOpenwebview()
+        break;
+    }
+  },
+  handleOpenwebview() {
+    wx.navigateTo({
+      url: '/pages/webview/webview'
+    })
+  },
+  handleOpenofficeaccount() {
+    wx.navigateTo({
+      url: '/pages/officialaccount/officialaccount'
+    })
+  },
+  handleOpencuspage() {
+    wx.navigateTo({
+      url: '/pages/adcuspage/adcuspage'
+    })
+  },
+  handleOpenadPage() {
+    wx.navigateTo({
+      url: '/pages/adpage/adpage'
+    })
+  },
+  handleOpenopenDataPage() {
+    wx.navigateTo({
+      url: '/pages/opendatapage/opendatapage'
+    })
+  },
   onAdd: function () {
     // const db = wx.cloud.database()
     // db.collection('counters').add({
@@ -47,7 +91,7 @@ Page({
     // })
   },
 
-  onQuery: function() {
+  onQuery: function () {
     // const db = wx.cloud.database()
     // // 查询当前用户所有的 counters
     // db.collection('counters').where({
@@ -69,7 +113,7 @@ Page({
     // })
   },
 
-  onCounterInc: function() {
+  onCounterInc: function () {
     // const db = wx.cloud.database()
     // const newCount = this.data.count + 1
     // db.collection('counters').doc(this.data.counterId).update({
@@ -88,7 +132,7 @@ Page({
     // })
   },
 
-  onCounterDec: function() {
+  onCounterDec: function () {
     // const db = wx.cloud.database()
     // const newCount = this.data.count - 1
     // db.collection('counters').doc(this.data.counterId).update({
@@ -107,7 +151,7 @@ Page({
     // })
   },
 
-  onRemove: function() {
+  onRemove: function () {
     // if (this.data.counterId) {
     //   const db = wx.cloud.database()
     //   db.collection('counters').doc(this.data.counterId).remove({
@@ -157,7 +201,7 @@ Page({
         }
       })
     } else {
-      const callback = this.data.step !== 6 ? function() {} : function() {
+      const callback = this.data.step !== 6 ? function () { } : function () {
         console.group('数据库文档')
         console.log('https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/database.html')
         console.groupEnd()
@@ -175,7 +219,7 @@ Page({
     })
   },
 
-  goHome: function() {
+  goHome: function () {
     const pages = getCurrentPages()
     if (pages.length === 2) {
       wx.navigateBack()

@@ -1,15 +1,33 @@
 <!-- pages/userConsole/userConsole.wxml -->
 <view class="container">
-  <!-- 媒体-地图 -->
+  <!-- cover-image -->
   <view class="uploader">
-    <view class="uploader-text" bindtap="handleOpen">
-      <text>地图</text>
+    <view class="uploader-text" bindtap="handleOpen" data-clicknum="1">
+      <text>cover-image-参照地图组件的中心图片</text>
     </view>
   </view>
-  <!-- 媒体-地图 -->
+  <!-- 移动视图 -->
   <view class="uploader">
-    <view class="uploader-text" bindtap="handleOpen">
-      <text>地图</text>
+    <view class="uploader-text" bindtap="handleOpen" data-clicknum="2">
+      <text>拖拽试图 movable</text>
+    </view>
+  </view>
+  <!-- pagecontainer -->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="handleOpen" data-clicknum="3">
+      <text>顺滑弹窗 popup/pagecontainer</text>
+    </view>
+  </view>
+  <!-- share-element -->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="handleOpen" data-clicknum="4">
+      <text>share-element 共享元素</text>
+    </view>
+  </view>
+  <!-- swiper -->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="handleOpen" data-clicknum="5">
+      <text>swiper 轮播</text>
     </view>
   </view>
 </view>

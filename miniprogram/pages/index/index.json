@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "媒体",
   "usingComponents": {
     "action-sheet": "/components/actionSheet/index"
   }

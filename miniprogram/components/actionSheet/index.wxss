@@ -83,7 +83,7 @@
     width: 100%;
   }
   
-  .i-as-cancel button {
+  .i-as-cancel-btn {
     font-size: 32rpx;
     color: #6c6c6c;
     height: 130rpx;

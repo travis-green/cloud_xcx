@@ -1,0 +1,26 @@
+<!-- <open-data type="groupName" open-gid="xxxxxx"></open-data>  拉群昵称 ，群id -->
+<open-data type="userAvatarUrl"></open-data>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  性别：
+  <open-data type="userGender" lang="zh_CN"></open-data>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  姓名：
+  <open-data type="userNickName" lang="zh_CN"></open-data>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  城市：
+  <open-data type="userCity" lang="zh_CN"></open-data>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  省份：
+  <open-data type="userProvince" lang="zh_CN"></open-data>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  国家：
+  <open-data type="userCountry" lang="zh_CN"></open-data>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  用户语言：
+  <open-data type="userLanguage" lang="zh_CN"></open-data>
+</view>

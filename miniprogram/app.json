@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/userConsole/userConsole",
+    "pages/index/index",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
     "pages/cameraContent/cameraContent",
@@ -16,7 +16,16 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
-    "pages/im/room/room"
+    "pages/im/room/room",
+    "pages/movable/movable",
+    "pages/pagecontainer/pagecontainer",
+    "pages/shareelement/shareelement",
+    "pages/swiper/swiper",
+    "pages/opendatapage/opendatapage",
+    "pages/adpage/adpage",
+    "pages/adcuspage/adcuspage",
+    "pages/officialaccount/officialaccount",
+    "pages/webview/webview"
   ],
   "tabBar": {
     "color": "#9595BD",
@@ -25,16 +34,16 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "媒体",
-        "iconPath": "images/icon1.png",
-        "selectedIconPath": "images/icon1s.png"
-      },
-      {
         "pagePath": "pages/userConsole/userConsole",
         "text": "位置",
         "iconPath": "images/icon2.png",
         "selectedIconPath": "images/icon2s.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "媒体",
+        "iconPath": "images/icon1.png",
+        "selectedIconPath": "images/icon1s.png"
       },
       {
         "pagePath": "pages/storageConsole/storageConsole",
