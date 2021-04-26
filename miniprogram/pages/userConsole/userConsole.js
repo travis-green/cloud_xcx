@@ -51,8 +51,8 @@ Page({
       success: (result) => {
         console.log(result)
       },
-      fail: () => { },
-      complete: () => { }
+      fail: () => {},
+      complete: () => {}
     })
   },
   handlePagecontainer() {
@@ -61,8 +61,8 @@ Page({
       success: (result) => {
         console.log(result)
       },
-      fail: () => { },
-      complete: () => { }
+      fail: () => {},
+      complete: () => {}
     })
   }
 })

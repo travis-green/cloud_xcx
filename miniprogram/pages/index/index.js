@@ -5,7 +5,7 @@ import util from '../../utils/util'
 
 Page({
   data: {
-    btntype: 4, //按钮类型,修改此类型 查看不同的button 类型1 获取openid-云函数， 2获取用户信息-旧， 3获取用户信息新， 4授权手机号
+    btntype: 3, //按钮类型,修改此类型 查看不同的button 类型1 获取openid-云函数， 2获取用户信息-旧， 3获取用户信息新， 4授权手机号
     visible: false, //actionsheet
     avatarUrl: './user-unlogin.png',
     userInfo: {},
@@ -180,10 +180,10 @@ Page({
       name: 'login',
       data: {},
       success: res => {
-        console.log(typeof (res.result.userInfo.openId))
-        util.toast(`${res.result.userInfo.openId}`)
-        //业务处理
-        app.globalData.openid = res.result.userInfo.openId
+        console.log(res)
+        util.toast(`${res.result.event.userInfo.openId}`)
+        // //业务处理
+        app.globalData.openid = res.result.event.userInfo.openId
       },
       fail: err => {
         console.error('[云函数] [login] 调用失败', err)
@@ -196,36 +196,6 @@ Page({
     this.setData({
       visible: true
     })
-  },
-  jumpToCaramContent() {
-    wx.navigateTo({
-      url: '../cameraContent/cameraContent'
-    })
-  },
-  //关闭actionsheet
-  handleCancel(e) {
-    //关闭sheet
-    this.setData({
-      visible: false
-    })
-  },
-  chooseImageWechatFile() {
-    //需要在真机调试
-    wx.chooseMessageFile({
-      count: 10,
-      type: 'image', //type- video, file, image
-      success(res) {
-        // tempFilePath可以作为img标签的src属性显示图片
-        const tempFilePaths = res.tempFiles[0] //临时地址，记得后端存起来
-      }
-    })
-  },
-  onShow() {
-    // const performance = wx.getPerformance()
-    // const observer = performance.createObserver((entryList) => {
-    //   //返回的是list
-    //   console.log('性能\n', entryList.getEntries())
-    //   // console.log('route: 路由性能；appLaunch: 小程序启动耗时\n', entryList.getEntriesByName("appLaunch", "navigation")[0])
     //   // console.log('firstRender: 页面首次渲染耗时\n', entryList.getEntriesByName("firstRender", "render")[0])
     //   // console.log('evaluateScript: 注入脚本耗时\n', entryList.getEntriesByName("evaluateScript", "script")[0])
     // })

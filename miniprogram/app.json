@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/userConsole/userConsole",
     "pages/index/index",
+    "pages/cloudPage/cloudPage",
+    "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
     "pages/cameraContent/cameraContent",
@@ -35,7 +36,7 @@
     "list": [
       {
         "pagePath": "pages/userConsole/userConsole",
-        "text": "位置",
+        "text": "视图",
         "iconPath": "images/icon2.png",
         "selectedIconPath": "images/icon2s.png"
       },

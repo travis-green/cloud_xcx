@@ -3,7 +3,7 @@
   <!-- cover-image -->
   <view class="uploader">
     <view class="uploader-text" bindtap="handleOpen" data-clicknum="1">
-      <text>open-data 用于展示微信开放的数据</text>
+      <text>云函数</text>
     </view>
   </view>
   <view class="uploader">
